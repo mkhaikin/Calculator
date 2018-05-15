@@ -1,10 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding:0;
+}
+
+header{
+  background-color: #005cb3;
+  color: white;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-family: sans-serif;
+}
+
 button {
-font-size: 200%;
-width: 40px;
+  font-size: 200%;
+  width: 60px;
+  color: #fff;
+  background: #0084ff;
+  border-radius: 5px;
+  padding: 8px 14px;
 }
 
 input {
-font-size: 14px;
-height: 40px;
-text-align: right;
+  font-size: 18px;
+  height: 40px;
+  text-align: right;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 14px;
+}
+table {
+
+}
+
+#calc {
+  border: 2px gray solid;
+  border-radius: 5px;
+  margin: 80 auto;
+}
+
+#clearButton {
+  background-color: #ff7b00;
 }
