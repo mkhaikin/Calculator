@@ -5,36 +5,39 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <table>
+    <header>
+      <h1>jQuery Calculator</h1>
+    </header>
+    <table id="calc">
       <tr>
         <td colspan="4"><input id="display" name="display" disabled></input></td>
       </tr>
       <tr>
-        <td><button id="button1" value="1">1</button></td>
-        <td><button id="button2" value="2">2</button></td>
-        <td><button id="button3" value="3">3</button></td>
-        <td><button id="addButton">+</button></td>
+        <td><button id="button1" data-role="number" value="1">1</button></td>
+        <td><button id="button2" data-role="number" value="2">2</button></td>
+        <td><button id="button3" data-role="number" value="3">3</button></td>
+        <td><button id="addButton" data-role="operator">+</button></td>
       </tr>
       <tr>
-        <td><button id="button4" value="4">4</button></td>
-        <td><button id="button5" value="5">5</button></td>
-        <td><button id="button6" value="6">6</button></td>
-        <td><button id="subtractButton">-</button></td>
+        <td><button id="button4" data-role="number" value="4">4</button></td>
+        <td><button id="button5" data-role="number" value="5">5</button></td>
+        <td><button id="button6" data-role="number" value="6">6</button></td>
+        <td><button id="subtractButton" data-role="operator">-</button></td>
       </tr>
       <tr>
-        <td><button id="button7" value="7">7</button></td>
-        <td><button id="button8" value="8">8</button></td>
-        <td><button id="button9" value="9">9</button></td>
-        <td><button id="multiplyButton">*</button></td>
+        <td><button id="button7" data-role="number" value="7">7</button></td>
+        <td><button id="button8" data-role="number" value="8">8</button></td>
+        <td><button id="button9" data-role="number" value="9">9</button></td>
+        <td><button id="multiplyButton" data-role="operator">*</button></td>
       </tr>
       <tr>
-        <td><button id="clearButton">C</button></td>
-        <td><button id="button0" value="0">0</button></td>
-        <td><button id="equalsButton">=</button></td>
-        <td><button id="divideButton">&#247;</button></td>
+        <td><button id="clearButton" data-role="number">C</button></td>
+        <td><button id="button0" data-role="number" value="0">0</button></td>
+        <td><button id="equalsButton" data-role="operator">=</button></td>
+        <td><button id="divideButton" data-role="operator">&#247;</button></td>
       </tr>
     </table>
-    <span id='output'><!-- Use this span for writing debug messages or anything else you think will help! --></span>
+    <span id='output'></span>
 
     <script src="calc.js"></script>
   </body>
