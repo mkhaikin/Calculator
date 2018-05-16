@@ -1,4 +1,3 @@
-
 $("button").on("click", function(){
     if($(this).attr("value")){
       $('#output').text($('#output').html()+$(this).text());
