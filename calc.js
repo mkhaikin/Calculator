@@ -1,27 +1,29 @@
-$(document).ready(function() {
-	//  function clearDisplay(){
-	//   $(function(){
-	//     $('#display').val("5");
-	//   });
-	// }
+ $("button").on("click", function(){
+	if($(this).attr("value")){
+		$('#output').text($('#output').html()+$(this).text());
+		$('#display').val($('#display').val()+$(this).text());
+		console.log($(this).text());
+ 	 } else{
+		if($('#output').text()!=''){
+			if(this.id == 'equalsButton'){
+			 $('#output').html($('#output').html());
+			 console.log($(this).text());
+		} else {
+		 $('#output').html($('#output').html()+$(this).text());
+		 console.log($(this).val());
+		}
+	 }
+   }
+ });
 
-	$('#clearButton').on('click', function() {
-		firstValue.splice(0, firstValue.length);
-	});
-	// var result = 0;
-	// $('button').click(function() {
-	//   let val = $(this).val();
-	//   result =$('#display').val(val);
-	// });
-	let firstValue = [];
-	$(function() {
-		$('button').on('click', function() {
-			let val = $(this).val();
-			firstValue.push(Number(val));
-			console.log(firstValue);
-			for (let i = 0; i < firstValue.length; i++) {
-				$('#output').val(firstValue[i]);
-			}
-		});
-	});
-});
+ $("#clearButton").on("click",function(){
+   $('#output').html('');
+ $('#display').val('');
+ });
+
+ $("#equalsButton").on("click", function(){
+	var expression = $('#output').text();
+	var total = (eval(expression));
+  $('#display').val(total);
+	console.log(total);
+ });
